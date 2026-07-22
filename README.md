@@ -9,15 +9,15 @@ python -m pip install -r requirements.txt
 python -c "import nltk; nltk.download('wordnet'); nltk.download('omw-1.4'); nltk.download('averaged_perceptron_tagger_eng')"
 ```
 
-Always run from the `gecomp/` folder.
+Run from the `gecomp/` folder.
 
 ## 1. Get models
 
 Generator (rewriter): download [google/flan-t5-base](https://huggingface.co/google/flan-t5-base). Hugging Face will pull it on first run, or put a local copy under `model/`.
 
-Victim classifier: use a Hub id (e.g. [textattack/roberta-base-SST-2](https://huggingface.co/textattack/roberta-base-SST-2)), a short alias like `roberta_sst2`, or a folder under `model/`.
-
 Similarity check uses [paraphrase-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L6-v2). Fluency (PPL) uses [gpt2](https://huggingface.co/openai-community/gpt2). Both also auto-download unless you mirror them under `model/`.
+
+More details can be found in our paper.
 
 ## 2. Get data
 
@@ -35,7 +35,7 @@ Datasets come from Hugging Face `datasets` and are cached after the first load:
 python -m main.train --dataset sst2 --victim roberta_sst2
 ```
 
-Checkpoints go to `model/<victim>_<dataset>/` (e.g. `epoch_3`). That folder is your planner for the next step.
+Checkpoints go to `model/<victim>_<dataset>/` (e.g. `epoch_3`).
 
 ## 4. Attack
 
@@ -47,7 +47,7 @@ Results are written under `outputs/`.
 
 ## Operators
 
-Default pool: `misspell`, `homoglyph`, `semantic`, `phonetic`.
+Default basic perturbation pool: `misspell`, `homoglyph`, `semantic`, `phonetic`.
 
 ## Add an operator
 
