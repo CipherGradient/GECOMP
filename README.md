@@ -47,9 +47,9 @@ Results are written under `outputs/`.
 
 ## Operators
 
-Default basic perturbation pool: `misspell`, `homoglyph`, `semantic`, `phonetic`.
+We provide some basic perturbation pool: `misspell`, `homoglyph`, `semantic`, `phonetic`.
 
-## Add an operator
+## If you want to add a new operator:
 
 Copy `main/ops/_template_op.py` to something like `main/ops/my_op.py`.
 
