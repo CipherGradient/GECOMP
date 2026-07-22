@@ -40,10 +40,10 @@ Checkpoints go to `model/<victim>_<dataset>/` (e.g. `epoch_3`). That folder is y
 ## 4. Attack
 
 ```bash
-python -m main.attack --dataset sst2 --subset 600 --victim roberta_sst2 --planner_ckpt model/roberta_sst2_sst2/epoch_3 --edit_ratio_cap 0.10
+python -m main.attack --dataset sst2 --subset 600 --victim roberta_sst2 --planner_ckpt model/roberta_sst2_sst2/epoch_3
 ```
 
-Results are written under `outputs/`. Common gates: `--sim_min 0.8 --ppl_max_ratio 2.0 --edit_ratio_cap 0.10 --budget_queries 40`.
+Results are written under `outputs/`.
 
 ## Operators
 
