@@ -32,7 +32,8 @@ Datasets come from Hugging Face `datasets` and are cached after the first load:
 ## 3. Train
 
 ```bash
-python -m main.train --dataset sst2 --victim roberta_sst2
+python -m main.train --dataset <dataset> --victim <victim>_<dataset>
+(e.g. python -m main.train --dataset sst2 --victim roberta_sst2)
 ```
 
 Checkpoints go to `model/<victim>_<dataset>/` (e.g. `epoch_3`).
