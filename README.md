@@ -47,7 +47,7 @@ Results are written under `outputs/`.
 
 ## Operators
 
-We provide some basic perturbation pool: `misspell`, `homoglyph`, `semantic`, `phonetic`.
+We provide several basic perturbation operators: `misspell`, `homoglyph`, `semantic`, `phonetic`.
 
 ## If you want to add a new operator:
 
