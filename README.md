@@ -40,7 +40,7 @@ Checkpoints go to `model/<victim>_<dataset>/` (e.g. `epoch_3`).
 ## 4. Attack
 
 ```bash
-python -m main.attack --dataset sst2 --subset 600 --victim <victim> --planner_ckpt model/<victim>_<dataset>/` (e.g. `epoch_3`)
+python -m main.attack --dataset <dataset> --subset 600 --victim <victim> --planner_ckpt model/<victim>_<dataset>/` (e.g. `epoch_3`)
 ```
 
 Results are written under `outputs/`.
